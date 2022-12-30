@@ -4,6 +4,7 @@
 --
 --  Created by Rakesh Ayyaswami on 31 Dec 2022.
 --
+
 local entity_graphics_path = k2_steel_pipes_path .. "graphics/steel-pipe/"
 
 data:extend({

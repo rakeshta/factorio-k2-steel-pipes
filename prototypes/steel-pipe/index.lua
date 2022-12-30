@@ -6,3 +6,5 @@
 --
 
 require("prototypes.steel-pipe.entity")
+require("prototypes.steel-pipe.item")
+require("prototypes.steel-pipe.recipe")

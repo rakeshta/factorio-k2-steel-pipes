@@ -9,3 +9,4 @@
 k2_steel_pipes_path = "__k2-steel-pipes__/"
 
 require("prototypes.steel-pipe.index")
+require("prototypes.technology")

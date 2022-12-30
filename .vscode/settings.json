@@ -11,5 +11,6 @@
   ],
   "Lua.workspace.userThirdParty": [
     "/Users/rakesh/Library/Application Support/Code/User/workspaceStorage/2d9225ae4075589ac7e1cc5953a9b90a/justarandomgeek.factoriomod-debug/sumneko-3rd"
-  ]
+  ],
+  "Lua.diagnostics.globals": ["k2_steel_pipes_path"]
 }

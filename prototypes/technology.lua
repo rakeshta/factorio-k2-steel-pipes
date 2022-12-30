@@ -25,10 +25,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "kr-steel-pipe-to-ground",
       },
-      -- {
-      --   type = "unlock-recipe",
-      --   recipe = "kr-steel-pump",
-      -- },
+      {
+        type = "unlock-recipe",
+        recipe = "kr-steel-pump",
+      },
     },
     prerequisites = { "steel-processing", "fluid-handling" },
     unit = {

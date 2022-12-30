@@ -14,5 +14,5 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "kr-steel-pipe-to-ground"
 
 -- Pump
--- data.raw.pump["pump"].fast_replaceable_group = "pump"
--- data.raw.pump["pump"].next_upgrade = "kr-steel-pump"
+data.raw.pump["pump"].fast_replaceable_group = "pump"
+data.raw.pump["pump"].next_upgrade = "kr-steel-pump"

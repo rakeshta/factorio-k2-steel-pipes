@@ -10,5 +10,6 @@
     "/Users/rakesh/Library/Application Support/Steam/steamapps/common/Factorio/factorio.app/Contents/data"
   ],
   "Lua.workspace.userThirdParty": [],
-  "Lua.diagnostics.globals": ["k2_steel_pipes_path", "steel_pipecoverspictures"]
+  "Lua.diagnostics.globals": ["k2_steel_pipes_path", "steel_pipecoverspictures"],
+  "cSpell.words": ["factorio"]
 }

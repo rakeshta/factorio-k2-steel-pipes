@@ -13,3 +13,4 @@ These pipes & pumps are more durable and support higher fluid throughput than th
 ## Related mods
 
 - [K2 Fluid Storage](https://mods.factorio.com/mod/k2-fluid-storage)
+- [K2 Flare Stack](https://mods.factorio.com/mod/k2-flare-stack)

@@ -10,7 +10,9 @@
     "! Krastorio2 >= 0.0.1",
     "! Krastorio2Assets >= 0.0.1",
     "! IndustrialRevolution >= 0.0.1",
-    "! IndustrialRevolution3 >= 0.0.1"
+    "! IndustrialRevolution3 >= 0.0.1",
+    "(?) underwater-pipes",
+    "(?) underground-pipe-pack"
   ],
   "package": {
     "ignore": [

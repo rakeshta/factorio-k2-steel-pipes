@@ -7,10 +7,9 @@
   "factorio_version": "1.1",
   "dependencies": [
     "base >= 1.1",
-    "! Krastorio2 >= 0.0.1",
-    "! Krastorio2Assets >= 0.0.1",
-    "! IndustrialRevolution >= 0.0.1",
-    "! IndustrialRevolution3 >= 0.0.1",
+    "! Krastorio2",
+    "! IndustrialRevolution",
+    "! IndustrialRevolution3",
     "(?) underwater-pipes",
     "(?) underground-pipe-pack"
   ],

@@ -16,3 +16,7 @@ These pipes & pumps are more durable and support higher fluid throughput than th
 - [K2 Flare Stack](https://mods.factorio.com/mod/k2-flare-stack)
 - [K2 Reinforced Plates](https://mods.factorio.com/mod/k2-reinforced-plates)
 - [K2 Railgun Turret](https://mods.factorio.com/mod/k2-railgun-turret)
+
+## Try Also
+
+- [Light Bot Start](https://mods.factorio.com/mod/rt-light-bot-start)

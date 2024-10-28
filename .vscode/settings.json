@@ -9,7 +9,10 @@
   "Lua.workspace.library": [
     "/Users/rakesh/Library/Application Support/Steam/steamapps/common/Factorio/factorio.app/Contents/data"
   ],
-  "Lua.workspace.userThirdParty": [],
+  "Lua.workspace.userThirdParty": [
+    "/Users/rakesh/Library/Application Support/Code/User/workspaceStorage/bbc5a579146c6d86d87d00bb311d5e6a/justarandomgeek.factoriomod-debug/sumneko-3rd"
+  ],
   "Lua.diagnostics.globals": ["k2_steel_pipes_path", "steel_pipecoverspictures"],
-  "cSpell.words": ["factorio"]
+  "cSpell.words": ["factorio"],
+  "Lua.workspace.checkThirdParty": "ApplyInMemory"
 }

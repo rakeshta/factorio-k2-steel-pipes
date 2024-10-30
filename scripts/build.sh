@@ -6,9 +6,15 @@
 #  Created by Rakesh Ayyaswami on 31 Dec 2022.
 #
 
+# Read info key path
+function read_info() {
+  echo $(npm run --silent read-info -- ${1})
+}
+
+# Constants
 BUILD_DIR=build
-PACKAGE_NAME=k2-steel-pipes
-PACKAGE_VERSION=1.1.0
+PACKAGE_NAME=$(read_info 'name')
+PACKAGE_VERSION=$(read_info 'version')
 ZIP_NAME=${PACKAGE_NAME}_${PACKAGE_VERSION}
 ZIP_FILE=${ZIP_NAME}.zip
 

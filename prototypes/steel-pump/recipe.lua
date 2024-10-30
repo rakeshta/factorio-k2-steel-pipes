@@ -12,11 +12,11 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { "iron-gear-wheel", 4 },
-      { "engine-unit", 1 },
-      { "steel-plate", 1 },
-      { "kr-steel-pipe", 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 4 },
+      { type = "item", name = "engine-unit",     amount = 1 },
+      { type = "item", name = "steel-plate",     amount = 1 },
+      { type = "item", name = "kr-steel-pipe",   amount = 1 },
     },
-    result = "kr-steel-pump",
+    results = { { type = "item", name = "kr-steel-pump", amount = 1 } }
   },
 })

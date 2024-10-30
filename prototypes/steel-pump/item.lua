@@ -13,7 +13,7 @@ data:extend({
     name = "kr-steel-pump",
     icon = entity_graphics_path .. "steel-pump-icon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    -- icon_mipmaps = 4,
     subgroup = "energy-pipe-distribution",
     order = "b[pipe]-ca[steel-pump]",
     place_result = "kr-steel-pump",

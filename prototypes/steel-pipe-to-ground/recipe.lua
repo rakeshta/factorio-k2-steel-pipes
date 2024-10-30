@@ -11,10 +11,9 @@ data:extend({
     name = "kr-steel-pipe-to-ground",
     enabled = false,
     ingredients = {
-      { "kr-steel-pipe", 15 },
-      { "steel-plate", 5 },
+      { type = "item", name = "kr-steel-pipe", amount = 15 },
+      { type = "item", name = "steel-plate",   amount = 5 },
     },
-    result = "kr-steel-pipe-to-ground",
-    result_count = 2,
+    results = { { type = "item", name = "kr-steel-pipe-to-ground", amount = 2 } }
   },
 })

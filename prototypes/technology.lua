@@ -12,10 +12,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-steel-fluid-handling",
-    mod = "Krastorio2",
     icon = technology_graphics_path .. "steel-fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    -- icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
@@ -35,7 +34,7 @@ data:extend({
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
+        { "logistic-science-pack",   1 },
       },
       time = 30,
     },

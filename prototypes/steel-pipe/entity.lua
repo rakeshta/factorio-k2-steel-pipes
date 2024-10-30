@@ -5,6 +5,8 @@
 --  Created by Rakesh Ayyaswami on 31 Dec 2022.
 --
 
+local sounds = require("__base__/prototypes/entity/sounds")
+
 local entity_graphics_path = k2_steel_pipes_path .. "graphics/steel-pipe/"
 
 data:extend({
@@ -13,11 +15,12 @@ data:extend({
     name = "kr-steel-pipe",
     icon = entity_graphics_path .. "steel-pipe-icon.png",
     icon_size = 64,
-    icon_mipmaps = 4,
-    flags = { "placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving" },
+    -- icon_mipmaps = 4,
+    flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.1, result = "kr-steel-pipe" },
     max_health = 200,
     corpse = "pipe-remnants",
+    dying_explosion = "pipe-explosion",
     resistances = {
       {
         type = "fire",
@@ -33,15 +36,20 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
       base_area = 1,
+      volume = 200,
       height = 1.25,
+      pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { position = { 0, -1 } },
-        { position = { 1, 0 } },
-        { position = { 0, 1 } },
-        { position = { -1, 0 } },
+        { direction = defines.direction.north, position = { 0, -0.2 } },
+        { direction = defines.direction.east,  position = { 0.2, 0 } },
+        { direction = defines.direction.south, position = { 0, 0.2 } },
+        { direction = defines.direction.west,  position = { -0.2, 0 } }
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
+    working_sound = sounds.pipe,
+    open_sound = sounds.metal_small_open,
+    close_sound = sounds.metal_small_close,
     pictures = {
       straight_vertical_single = {
         filename = entity_graphics_path .. "steel-pipe-straight-vertical-single.png",
@@ -354,16 +362,6 @@ data:extend({
           direction_count = 1,
         },
       },
-    },
-    working_sound = {
-      sound = {
-        {
-          filename = "__base__/sound/pipe.ogg",
-          volume = 0.95,
-        },
-      },
-      match_volume_to_activity = true,
-      max_sounds_per_type = 3,
     },
     horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } },
     vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },

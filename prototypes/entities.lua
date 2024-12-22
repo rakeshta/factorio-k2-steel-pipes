@@ -325,11 +325,11 @@ data:extend({
 
   {
     type = "pipe-to-ground",
-    name = "pipe-to-ground",
+    name = "kr-steel-pipe-to-ground",
     icon = "__base__/graphics/icons/pipe-to-ground.png",
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.1, result = "pipe-to-ground" },
-    max_health = 150,
+    max_health = 300,
     corpse = "pipe-to-ground-remnants",
     dying_explosion = "pipe-to-ground-explosion",
     factoriopedia_simulation = simulations.factoriopedia_pipe_to_ground,
@@ -338,11 +338,11 @@ data:extend({
     {
       {
         type = "fire",
-        percent = 80
+        percent = 100
       },
       {
         type = "impact",
-        percent = 40
+        percent = 60
       }
 
     },
@@ -352,7 +352,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     fluid_box =
     {
-      volume = 100,
+      volume = 200,
       pipe_covers = steel_pipe_covers_pictures(),
       pipe_connections =
       {
@@ -361,7 +361,7 @@ data:extend({
           connection_type = "underground",
           direction = defines.direction.south,
           position = { 0, 0 },
-          max_underground_distance = 10
+          max_underground_distance = 30
         }
       },
       hide_connection_info = true

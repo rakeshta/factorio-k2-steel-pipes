@@ -1,7 +1,14 @@
-local graphics_path = k2_steel_pipes_path .. "graphics/"
+--
+--  items.lua
+--  factorio-k2-steel-pipes
+--
+--  Created by Rakesh Ayyaswami on 23 Dec 2024.
+--
 
 local item_sounds = require("__base__/prototypes/item_sounds")
 local item_tints = require("__base__/prototypes/item-tints")
+
+local graphics_path = k2_steel_pipes_path .. "graphics/"
 
 data:extend({
   {

@@ -1,5 +1,5 @@
 --
---  pipe-covers.lua
+--  entities.lua
 --  factorio-k2-steel-pipes
 --
 --  Created by Rakesh Ayyaswami on 23 Dec 2024.
@@ -7,6 +7,8 @@
 
 local sounds = require("__base__/prototypes/entity/sounds")
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
+
+local graphics_path = k2_steel_pipes_path .. "graphics/"
 
 --- @param i integer
 local function make_visualization(i)
@@ -39,7 +41,7 @@ local steel_pipe_pictures = function()
   {
     straight_vertical_single =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-straight-vertical-single.png",
+      filename = graphics_path .. "pipe/pipe-straight-vertical-single.png",
       priority = "extra-high",
       width = 160,
       height = 160,
@@ -47,7 +49,7 @@ local steel_pipe_pictures = function()
     },
     straight_vertical =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-straight-vertical.png",
+      filename = graphics_path .. "pipe/pipe-straight-vertical.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -55,7 +57,7 @@ local steel_pipe_pictures = function()
     },
     straight_vertical_window =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-straight-vertical-window.png",
+      filename = graphics_path .. "pipe/pipe-straight-vertical-window.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -63,7 +65,7 @@ local steel_pipe_pictures = function()
     },
     straight_horizontal_window =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-straight-horizontal-window.png",
+      filename = graphics_path .. "pipe/pipe-straight-horizontal-window.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -71,7 +73,7 @@ local steel_pipe_pictures = function()
     },
     straight_horizontal =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-straight-horizontal.png",
+      filename = graphics_path .. "pipe/pipe-straight-horizontal.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -79,7 +81,7 @@ local steel_pipe_pictures = function()
     },
     corner_up_right =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-corner-up-right.png",
+      filename = graphics_path .. "pipe/pipe-corner-up-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -87,7 +89,7 @@ local steel_pipe_pictures = function()
     },
     corner_up_left =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-corner-up-left.png",
+      filename = graphics_path .. "pipe/pipe-corner-up-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -95,7 +97,7 @@ local steel_pipe_pictures = function()
     },
     corner_down_right =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-corner-down-right.png",
+      filename = graphics_path .. "pipe/pipe-corner-down-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -103,7 +105,7 @@ local steel_pipe_pictures = function()
     },
     corner_down_left =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-corner-down-left.png",
+      filename = graphics_path .. "pipe/pipe-corner-down-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -111,7 +113,7 @@ local steel_pipe_pictures = function()
     },
     t_up =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-t-up.png",
+      filename = graphics_path .. "pipe/pipe-t-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -119,7 +121,7 @@ local steel_pipe_pictures = function()
     },
     t_down =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-t-down.png",
+      filename = graphics_path .. "pipe/pipe-t-down.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -127,7 +129,7 @@ local steel_pipe_pictures = function()
     },
     t_right =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-t-right.png",
+      filename = graphics_path .. "pipe/pipe-t-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -135,7 +137,7 @@ local steel_pipe_pictures = function()
     },
     t_left =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-t-left.png",
+      filename = graphics_path .. "pipe/pipe-t-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -143,7 +145,7 @@ local steel_pipe_pictures = function()
     },
     cross =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-cross.png",
+      filename = graphics_path .. "pipe/pipe-cross.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -151,7 +153,7 @@ local steel_pipe_pictures = function()
     },
     ending_up =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-ending-up.png",
+      filename = graphics_path .. "pipe/pipe-ending-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -159,7 +161,7 @@ local steel_pipe_pictures = function()
     },
     ending_down =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-ending-down.png",
+      filename = graphics_path .. "pipe/pipe-ending-down.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -167,7 +169,7 @@ local steel_pipe_pictures = function()
     },
     ending_right =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-ending-right.png",
+      filename = graphics_path .. "pipe/pipe-ending-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -175,7 +177,7 @@ local steel_pipe_pictures = function()
     },
     ending_left =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-ending-left.png",
+      filename = graphics_path .. "pipe/pipe-ending-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -219,7 +221,7 @@ local steel_pipe_pictures = function()
     ending_left_disabled_visualization = make_disabled_visualization(8),
     horizontal_window_background =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-horizontal-window-background.png",
+      filename = graphics_path .. "pipe/pipe-horizontal-window-background.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -227,7 +229,7 @@ local steel_pipe_pictures = function()
     },
     vertical_window_background =
     {
-      filename = "__base__/graphics/entity/pipe/pipe-vertical-window-background.png",
+      filename = graphics_path .. "pipe/pipe-vertical-window-background.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -277,23 +279,23 @@ end
 data:extend({
   {
     type = "pipe",
-    name = "pipe",
-    icon = "__base__/graphics/icons/pipe.png",
+    name = "kr-steel-pipe",
+    icon = graphics_path .. "icons/pipe.png",
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "pipe" },
+    minable = { mining_time = 0.1, result = "kr-steel-pipe" },
     max_health = 100,
-    corpse = "pipe-remnants",
+    corpse = "kr-steel-pipe-remnants",
     dying_explosion = "pipe-explosion",
     icon_draw_specification = { scale = 0.5 },
     resistances =
     {
       {
         type = "fire",
-        percent = 80
+        percent = 90
       },
       {
         type = "impact",
-        percent = 30
+        percent = 50
       }
     },
     fast_replaceable_group = "pipe",
@@ -326,19 +328,19 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "kr-steel-pipe-to-ground",
-    icon = "__base__/graphics/icons/pipe-to-ground.png",
+    icon = graphics_path .. "icons/pipe-to-ground.png",
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.1, result = "pipe-to-ground" },
+    minable = { mining_time = 0.1, result = "kr-steel-pipe-to-ground" },
     max_health = 300,
-    corpse = "pipe-to-ground-remnants",
+    corpse = "kr-steel-pipe-to-ground-remnants",
     dying_explosion = "pipe-to-ground-explosion",
-    factoriopedia_simulation = simulations.factoriopedia_pipe_to_ground,
+    -- factoriopedia_simulation = simulations.factoriopedia_pipe_to_ground,
     icon_draw_specification = { scale = 0.5 },
     resistances =
     {
       {
         type = "fire",
-        percent = 100
+        percent = 90
       },
       {
         type = "impact",
@@ -374,7 +376,7 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png",
+        filename = graphics_path .. "pipe-to-ground/pipe-to-ground-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -382,7 +384,7 @@ data:extend({
       },
       south =
       {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
+        filename = graphics_path .. "pipe-to-ground/pipe-to-ground-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -390,7 +392,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
+        filename = graphics_path .. "pipe-to-ground/pipe-to-ground-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -398,7 +400,7 @@ data:extend({
       },
       east =
       {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
+        filename = graphics_path .. "pipe-to-ground/pipe-to-ground-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -487,13 +489,13 @@ data:extend({
 
   {
     type = "pump",
-    name = "pump",
-    icon = "__base__/graphics/icons/pump.png",
+    name = "kr-steel-pump",
+    icon = graphics_path .. "icons/pump.png",
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.2, result = "pump" },
+    minable = { mining_time = 0.2, result = "kr-steel-pump" },
     max_health = 180,
     fast_replaceable_group = "pipe",
-    corpse = "pump-remnants",
+    corpse = "kr-steel-pump-remnants",
     dying_explosion = "pump-explosion",
     collision_box = { { -0.29, -0.9 }, { 0.29, 0.9 } },
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
@@ -509,16 +511,16 @@ data:extend({
     {
       {
         type = "fire",
-        percent = 80
+        percent = 90
       },
       {
         type = "impact",
-        percent = 30
+        percent = 50
       }
     },
     fluid_box =
     {
-      volume = 400,
+      volume = 800,
       pipe_covers = steel_pipe_covers_pictures(),
       pipe_connections =
       {
@@ -530,10 +532,10 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      drain = "1kW"
+      drain = "2kW"
     },
-    energy_usage = "29kW",
-    pumping_speed = 20,
+    energy_usage = "50kW",
+    pumping_speed = 40,
     impact_category = "metal",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -542,7 +544,7 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/pump/pump-north.png",
+        filename = graphics_path .. "pump/pump-north.png",
         width = 103,
         height = 164,
         scale = 0.5,
@@ -553,7 +555,7 @@ data:extend({
       },
       east =
       {
-        filename = "__base__/graphics/entity/pump/pump-east.png",
+        filename = graphics_path .. "pump/pump-east.png",
         width = 130,
         height = 109,
         scale = 0.5,
@@ -565,7 +567,7 @@ data:extend({
 
       south =
       {
-        filename = "__base__/graphics/entity/pump/pump-south.png",
+        filename = graphics_path .. "pump/pump-south.png",
         width = 114,
         height = 160,
         scale = 0.5,
@@ -576,7 +578,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/pump/pump-west.png",
+        filename = graphics_path .. "pump/pump-west.png",
         width = 131,
         height = 111,
         scale = 0.5,
@@ -590,13 +592,13 @@ data:extend({
     fluid_wagon_connector_frame_count = 35,
     fluid_wagon_connector_alignment_tolerance = 2.0 / 32.0,
 
-    fluid_wagon_connector_graphics = require("prototypes.entity.pump-connector"),
+    fluid_wagon_connector_graphics = require("prototypes.pump-connector"),
 
     fluid_animation =
     {
       north =
       {
-        filename = "__base__/graphics/entity/pump/pump-north-liquid.png",
+        filename = graphics_path .. "pump/pump-north-liquid.png",
         apply_runtime_tint = true,
         width = 38,
         height = 22,
@@ -608,7 +610,7 @@ data:extend({
 
       east =
       {
-        filename = "__base__/graphics/entity/pump/pump-east-liquid.png",
+        filename = graphics_path .. "pump/pump-east-liquid.png",
         width = 35,
         height = 46,
         scale = 0.5,
@@ -619,7 +621,7 @@ data:extend({
 
       south =
       {
-        filename = "__base__/graphics/entity/pump/pump-south-liquid.png",
+        filename = graphics_path .. "pump/pump-south-liquid.png",
         width = 38,
         height = 45,
         scale = 0.5,
@@ -629,7 +631,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/pump/pump-west-liquid.png",
+        filename = graphics_path .. "pump/pump-west-liquid.png",
         width = 35,
         height = 47,
         scale = 0.5,
@@ -643,28 +645,28 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/pump/pump-north-glass.png",
+        filename = graphics_path .. "pump/pump-north-glass.png",
         width = 64,
         height = 128,
         scale = 0.5
       },
       east =
       {
-        filename = "__base__/graphics/entity/pump/pump-east-glass.png",
+        filename = graphics_path .. "pump/pump-east-glass.png",
         width = 128,
         height = 192,
         scale = 0.5
       },
       south =
       {
-        filename = "__base__/graphics/entity/pump/pump-south-glass.png",
+        filename = graphics_path .. "pump/pump-south-glass.png",
         width = 64,
         height = 128,
         scale = 0.5
       },
       west =
       {
-        filename = "__base__/graphics/entity/pump/pump-west-glass.png",
+        filename = graphics_path .. "pump/pump-west-glass.png",
         width = 192,
         height = 192,
         scale = 0.5,
@@ -675,5 +677,4 @@ data:extend({
     circuit_connector = circuit_connector_definitions["pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
-
 })

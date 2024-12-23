@@ -1,8 +1,12 @@
 ## K2 Steel Pipes
 
-Add the steel pipes & steel pump from Krastorio 2 to your game without adding any of the other features of the awesome Krastorio 2 mod.
+Add steel pipes & steel pumps with longer underground length, higher throughput and more durability to your game.
 
-These pipes & pumps are more durable and support higher fluid throughput than their vanilla variants.
+This is inspired by the steel pipes & pumps from the awesome Krastorio 2 mod.
+
+## Space Age Compatibility
+
+If you have Space Age installed, you can also cast steel pipes & steel underground pipes directly from molten iron.
 
 ## Entities in this mod
 

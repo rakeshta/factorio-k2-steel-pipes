@@ -14,3 +14,6 @@ require("prototypes.remnants")
 require("prototypes.entities")
 require("prototypes.recipes")
 require("prototypes.technology")
+
+-- compatibility with other mods
+require("prototypes.compat.space-age")

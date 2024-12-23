@@ -11,5 +11,5 @@ k2_steel_pipes_path = "__k2-steel-pipes__/"
 require("prototypes.pipe-covers")
 require("prototypes.items")
 require("prototypes.entities")
--- require("prototypes.recipes")
--- require("prototypes.technology")
+require("prototypes.recipes")
+require("prototypes.technology")

@@ -19,6 +19,7 @@ data:extend({
   {
     type = "recipe",
     name = "kr-steel-pipe-to-ground",
+    energy_required = 1,
     enabled = false,
     ingredients = {
       { type = "item", name = "kr-steel-pipe", amount = 30 },

@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2024-12-24
+  Features:
+    - Rewritten from the ground up to improve compatibility with Factorio 2.0.
+    - All new graphics for pipes, underground pipes, and pumps.
+    - New pipe & underground pipe casing recipes in Space Age.
+  Bugfixes:
+    - Fixed graphical glitches with pipe covers.
+    - Fixed crash when Squeak Through 2 is installed.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2024-10-31
+  Changes:
+    - Basic compatibility with Factorio 2.0.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024-09-12
+  Bugfixes:
+    - Fixed compatibility issues with underwater pipes & advanced fluid handling mods.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2023-10-01
+  Features:
+    - Initial release with steel pipes, underground pipes, and pumps.

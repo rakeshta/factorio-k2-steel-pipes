@@ -6,6 +6,10 @@ const ROOT_FOLDER = path.normalize(path.join(__dirname, '..'));
 const SOURCE_GRAPHICS_FOLDER = ROOT_FOLDER + '/__source_graphics__';
 const DEST_GRAPHICS_FOLDER = ROOT_FOLDER + '/graphics';
 
+const ASSETS_FOLDER = ROOT_FOLDER + '/assets';
+
+const CUSTOM_ASSETS = ['icons/casting-pipe.png', 'icons/casting-pipe-to-ground.png'];
+
 async function main(): Promise<void> {
   // check source folder
   if (!fs.existsSync(SOURCE_GRAPHICS_FOLDER)) {
@@ -15,6 +19,9 @@ async function main(): Promise<void> {
 
   // start processing at the root of the source graphics folder
   await processDirectory();
+
+  // copy custom assets
+  await copyCustomAssets();
 }
 main();
 
@@ -65,4 +72,21 @@ function sipsCommand({ sourcePath, destPath }: { sourcePath: string; destPath: s
   return `
   sips -s format png --matchTo '/System/Library/ColorSync/Profiles/Generic Gray Gamma 2.2 Profile.icc' ${sourcePath} --out ${destPath}
   `;
+}
+
+async function copyCustomAssets(): Promise<void> {
+  // copy assets from a list to matching destination
+  for (const asset of CUSTOM_ASSETS) {
+    console.log(`Copying ${asset}`);
+
+    // form paths
+    const sourcePath = path.join(ASSETS_FOLDER, asset);
+    const destPath = path.join(DEST_GRAPHICS_FOLDER, asset);
+
+    // ensure folder exists
+    fs.mkdirSync(path.dirname(destPath), { recursive: true });
+
+    // copy asset
+    fs.copyFileSync(sourcePath, destPath);
+  }
 }

@@ -34,10 +34,10 @@ data:extend({
 
   {
     type = "recipe",
-    name = "kr-casting-pipe-to-ground",
+    name = "kr-casting-steel-pipe-to-ground",
     category = "metallurgy",
     subgroup = "energy-pipe-distribution",
-    order = "b[casting]-g[casting-pipe-to-ground]",
+    order = "b[casting]-g[casting-steel-pipe-to-ground]",
     icon = graphics_path .. "icons/casting-pipe-to-ground.png",
     enabled = false,
     ingredients =

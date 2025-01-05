@@ -12,6 +12,7 @@ end
 
 local graphics_path = k2_steel_pipes_path .. "graphics/"
 
+-- recipes
 data:extend({
   -- casting recipes
   {
@@ -19,7 +20,7 @@ data:extend({
     name = "kr-casting-steel-pipe",
     category = "metallurgy",
     subgroup = "energy-pipe-distribution",
-    order = "b[casting]-f[casting-steel-pipe]",
+    order = "b[casting]-h[casting-steel-pipe]",
     icon = graphics_path .. "icons/casting-pipe.png",
     enabled = false,
     ingredients =
@@ -37,7 +38,7 @@ data:extend({
     name = "kr-casting-steel-pipe-to-ground",
     category = "metallurgy",
     subgroup = "energy-pipe-distribution",
-    order = "b[casting]-g[casting-steel-pipe-to-ground]",
+    order = "b[casting]-i[casting-steel-pipe-to-ground]",
     icon = graphics_path .. "icons/casting-pipe-to-ground.png",
     enabled = false,
     ingredients =
@@ -50,5 +51,9 @@ data:extend({
     results = { { type = "item", name = "kr-steel-pipe-to-ground", amount = 2 } },
     allow_productivity = false
   },
-
 })
+
+-- unlock casting recipes when foundry is researched
+table.insert(data.raw.technology["foundry"].effects, { type = "unlock-recipe", recipe = "kr-casting-steel-pipe" })
+table.insert(data.raw.technology["foundry"].effects,
+  { type = "unlock-recipe", recipe = "kr-casting-steel-pipe-to-ground" })

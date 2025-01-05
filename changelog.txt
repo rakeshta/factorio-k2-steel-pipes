@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025-01-06
+  Bugfixes:
+    - Fixed that steel pipe & pipe to ground casting recipes could not be unlocked in the Space Age.
+  Changes:
+    - Tweaked sort order of steel pipe, steel pipe to ground and steel pump.
+    - Tweaked steel pipe to ground english name & description.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2024-12-24
   Features:

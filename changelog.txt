@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 2026-08-14
+  Features:
+    - Steel pipes no longer connect to regular iron pipes, matching Krastorio 2 2.1. Machines and pumps still connect to both.
+  Changes:
+    - Updated for Factorio 2.1.
+    - Aligned pump wagon connectors, pump sounds, and pipe circuit wires with Factorio 2.1.
+    - Removed unused 2.0 pump connector graphics.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2025-01-08
   Changes:

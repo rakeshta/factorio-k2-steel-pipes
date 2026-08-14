@@ -7,12 +7,27 @@
     }
   ],
   "Lua.workspace.library": [
-    "/Users/rakesh/Library/Application Support/Steam/steamapps/common/Factorio/factorio.app/Contents/data"
+    "/Users/rakesh/Library/Application Support/Steam/steamapps/common/Factorio/factorio.app/Contents/data",
+    "/Users/rakesh/Library/Application Support/Code/User/workspaceStorage/bbc5a579146c6d86d87d00bb311d5e6a/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/library"
   ],
   "Lua.workspace.userThirdParty": [
     "/Users/rakesh/Library/Application Support/Code/User/workspaceStorage/bbc5a579146c6d86d87d00bb311d5e6a/justarandomgeek.factoriomod-debug/sumneko-3rd"
   ],
-  "Lua.diagnostics.globals": ["k2_steel_pipes_path", "steel_pipecoverspictures"],
-  "cSpell.words": ["factorio"],
+  "Lua.diagnostics.globals": ["__DebugAdapter", "__Profiler"],
+  "cSpell.words": ["factorio", "Krastorio"],
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "Lua.runtime.builtin": {
+    "io": "disable",
+    "os": "disable",
+    "math": "disable",
+    "debug": "disable",
+    "coroutine": "disable",
+    "package": "disable"
+  },
+  "Lua.runtime.version": "Lua 5.2",
+  "Lua.runtime.special": {
+    "__object_name": "type"
+  },
+  "Lua.runtime.plugin": "/Users/rakesh/Library/Application Support/Code/User/workspaceStorage/bbc5a579146c6d86d87d00bb311d5e6a/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/plugin.lua",
   "Lua.workspace.checkThirdParty": "ApplyInMemory"
 }

@@ -5,7 +5,8 @@
 --  Created by Rakesh Ayyaswami on 24 Dec 2024.
 --
 
-local graphics_path = k2_steel_pipes_path .. "graphics/"
+local constants = require("prototypes.constants")
+local graphics_path = constants.graphics_path
 
 data:extend({
   -- pipe remnants
@@ -24,16 +25,15 @@ data:extend({
     expires = false,
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
-    animation = make_rotated_animation_variations_from_sheet(2,
-      {
-        filename = graphics_path .. "pipe/remnants/pipe-remnants.png",
-        width = 122,
-        height = 120,
-        line_length = 1,
-        direction_count = 2,
-        shift = util.by_pixel(1.5, 2.5), -- -0,5
-        scale = 0.5
-      })
+    animation = make_rotated_animation_variations_from_sheet(2, {
+      filename = graphics_path .. "pipe/remnants/pipe-remnants.png",
+      width = 122,
+      height = 120,
+      line_length = 1,
+      direction_count = 2,
+      shift = util.by_pixel(1.5, 2.5), -- -0,5
+      scale = 0.5,
+    }),
   },
 
   -- pipe to ground remnants
@@ -52,16 +52,15 @@ data:extend({
     expires = false,
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
-    animation =
-    {
+    animation = {
       filename = graphics_path .. "pipe-to-ground/remnants/pipe-to-ground-remnants.png",
       width = 90,
       height = 80,
       line_length = 1,
       direction_count = 1,
       shift = util.by_pixel(0.5, -3),
-      scale = 0.5
-    }
+      scale = 0.5,
+    },
   },
 
   -- pump remnants
@@ -81,15 +80,14 @@ data:extend({
     expires = false,
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
-    animation = make_rotated_animation_variations_from_sheet(1,
-      {
-        filename = graphics_path .. "pump/remnants/pump-remnants.png",
-        line_length = 1,
-        width = 188,
-        height = 186,
-        direction_count = 4,
-        shift = util.by_pixel(2, 2),
-        scale = 0.5
-      })
+    animation = make_rotated_animation_variations_from_sheet(1, {
+      filename = graphics_path .. "pump/remnants/pump-remnants.png",
+      line_length = 1,
+      width = 188,
+      height = 186,
+      direction_count = 4,
+      shift = util.by_pixel(2, 2),
+      scale = 0.5,
+    }),
   },
-});
+})

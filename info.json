@@ -1,12 +1,12 @@
 {
   "name": "k2-steel-pipes",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "K2 Steel Pipes",
   "description": "Steel pipes & pumps inspired by Krastorio 2.",
   "author": "RaptorTWiked",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base",
+    "base >= 2.1.0",
     "! Krastorio2",
     "! IndustrialRevolution",
     "! IndustrialRevolution3",
@@ -17,9 +17,14 @@
   "package": {
     "ignore": [
       ".vscode",
+      "__attic__",
+      "__source_graphics__",
       "assets",
       "build",
       "scripts",
+      "node_modules",
+      ".DS_Store",
+      ".env",
       ".gitignore",
       "package-lock.json",
       "package.json"

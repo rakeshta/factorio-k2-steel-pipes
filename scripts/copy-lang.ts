@@ -1,3 +1,10 @@
+//
+//  copy-lang.ts
+//  factorio-k2-steel-pipes
+//
+//  Created by Rakesh Ayyaswami on 31 Dec 2022.
+//
+
 import fs from 'fs';
 import ConfigParser from 'configparser';
 
@@ -5,17 +12,24 @@ const K2_LANG_FILE = 'Krastorio2.cfg';
 const LANG_FILE = 'lang.cfg';
 const LANG_KEYS = ['kr-steel-pipe', 'kr-steel-pipe-to-ground', 'kr-steel-pump', 'kr-steel-fluid-handling'];
 
+const EXTRA_EN: Record<string, Record<string, string>> = {
+  'recipe-name': {
+    'kr-casting-steel-pipe': 'Casting steel pipe',
+    'kr-casting-steel-pipe-to-ground': 'Casting steel pipe to ground',
+  },
+};
+
 async function main(): Promise<void> {
-  // check if the source folder was passed as an argument
-  if (process.argv.length < 3) {
-    return printUsage();
+  const srcFolder = process.argv[2];
+  if (!srcFolder) {
+    printUsage();
+    return;
   }
 
-  // check that the given source folder exists
-  const srcFolder = process.argv[2];
   if (!fs.existsSync(srcFolder)) {
     console.error(`Source folder ${srcFolder} does not exist`);
-    return printUsage();
+    printUsage();
+    return;
   }
 
   // enumerate language folders & copy strings
@@ -25,6 +39,8 @@ async function main(): Promise<void> {
       await copyLocale(localeFolder, locale.name);
     }
   }
+
+  writeExtraEnStrings();
 }
 main();
 
@@ -62,14 +78,31 @@ async function copyLocale(localeFolder: string, locale: string): Promise<void> {
 
   // write dest config if not empty
   if (!isEmpty) {
-    // create dest folder
-    // const destFolder = `locale/${locale}`;
-    // fs.mkdirSync(destFolder, { recursive: true });
+    const destFolder = `locale/${locale}`;
+    fs.mkdirSync(destFolder, { recursive: true });
 
-    // write config
-    const destFile = `locale/${locale}/${LANG_FILE}`;
+    const destFile = `${destFolder}/${LANG_FILE}`;
     destConfig.write(destFile, true);
   }
+}
+
+function writeExtraEnStrings(): void {
+  const enFile = `locale/en/${LANG_FILE}`;
+  if (!fs.existsSync(enFile)) {
+    return;
+  }
+
+  const enConfig = new ConfigParser();
+  enConfig.read(enFile);
+  for (const [section, values] of Object.entries(EXTRA_EN)) {
+    if (!enConfig.sections().includes(section)) {
+      enConfig.addSection(section);
+    }
+    for (const [key, value] of Object.entries(values)) {
+      enConfig.set(section, key, value);
+    }
+  }
+  enConfig.write(enFile, true);
 }
 
 function printUsage(): void {

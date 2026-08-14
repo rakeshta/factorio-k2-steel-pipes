@@ -1,6 +1,6 @@
 {
   "name": "k2-steel-pipes",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Steel pipes & pumps inspired by Krastorio 2.",
   "author": "RaptorTWiked",
   "license": "LGPLv3",
@@ -14,7 +14,9 @@
     "unlink": "rm ~/Library/Application\\ Support/factorio/mods/$(npm run --silent read-info \"name\")"
   },
   "devDependencies": {
-    "ts-node": "^10.9.1"
+    "@types/node": "^26.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "configparser": "^0.3.10"

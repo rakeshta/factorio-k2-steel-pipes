@@ -5,13 +5,13 @@
 --  Created by Rakesh Ayyaswami on 24 Dec 2024.
 --
 
-local technology_graphics_path = k2_steel_pipes_path .. "graphics/technology/"
+local constants = require("prototypes.constants")
 
 data:extend({
   {
     type = "technology",
     name = "kr-steel-fluid-handling",
-    icon = technology_graphics_path .. "fluid-handling.png",
+    icon = constants.graphics_path .. "technology/fluid-handling.png",
     icon_size = 256,
     effects = {
       {
@@ -32,7 +32,7 @@ data:extend({
       count = 100,
       ingredients = {
         { "automation-science-pack", 1 },
-        { "logistic-science-pack",   1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },

@@ -30,6 +30,10 @@ async function processDirectory(subDir?: string): Promise<void> {
   const dir = subDir ? path.join(baseDir, subDir) : baseDir;
   for (const file of fs.readdirSync(dir, { withFileTypes: true })) {
     const subPath = subDir ? path.join(subDir, file.name) : file.name;
+    // Factorio 2.1 pumps use vanilla wagon_connection_graphics.
+    if (subPath === 'pump/connector') {
+      continue;
+    }
     if (file.isDirectory()) {
       await processDirectory(subPath);
     } else if (subPath.endsWith('.png')) {

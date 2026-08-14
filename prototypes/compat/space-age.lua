@@ -145,26 +145,12 @@ local function frozen_pipe_cover_pictures()
   }
 end
 
-local steel_cover_north = graphics_path .. "pipe-covers/pipe-cover-north.png"
 for _, prototype in pairs({
   data.raw["pipe"]["kr-steel-pipe"],
   data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"],
   data.raw["pump"]["kr-steel-pump"],
 }) do
-  ---@diagnostic disable-next-line: undefined-field
-  local fluid_boxes = prototype.fluid_boxes or { prototype.fluid_box }
-  for _, fluid_box in pairs(fluid_boxes) do
-    if
-      type(fluid_box) == "table"
-      and fluid_box.pipe_covers
-      and fluid_box.pipe_covers.north
-      and fluid_box.pipe_covers.north.layers
-      and fluid_box.pipe_covers.north.layers[1]
-      and fluid_box.pipe_covers.north.layers[1].filename == steel_cover_north
-    then
-      fluid_box.pipe_covers_frozen = frozen_pipe_cover_pictures()
-    end
-  end
+  prototype.fluid_box.pipe_covers_frozen = frozen_pipe_cover_pictures()
 end
 
 -- configure frozen pump graphics

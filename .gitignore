@@ -1,2 +1,7 @@
 node_modules
 build
+k2-source
+.DS_Store
+.venv
+tmp
+.env

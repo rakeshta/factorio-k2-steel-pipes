@@ -9,6 +9,7 @@
     "copy-lang": "rm -rf locale && ts-node scripts/copy-lang.ts",
     "prep-graphics": "rm -rf graphics && ts-node scripts/prep-graphics.ts",
     "build": "rm -rf build && /bin/bash scripts/build.sh",
+    "publish": "/bin/bash scripts/publish.sh",
     "read-info": "ts-node scripts/read-info.ts",
     "link": "ln -s $(pwd) ~/Library/Application\\ Support/factorio/mods/$(npm run --silent read-info \"name\")",
     "unlink": "rm ~/Library/Application\\ Support/factorio/mods/$(npm run --silent read-info \"name\")"
